@@ -38,9 +38,6 @@ Bril install video: <https://vod.video.cornell.edu/media/1_jc91ke0h>
 ---
 After setting up the dependencies and cloning this repo, run the commands below 
 
-````markdown
-## Quick start (from this `assignment1/` folder)
-
 ```bash
 # CFG edges for a test file (default command is `cfg`)
 bril2json < test/testcase1.bril | python3 cfg_driver.py
