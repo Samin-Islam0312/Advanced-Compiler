@@ -1,0 +1,14 @@
+@main {
+.entry:
+  x: int = const 0;
+  limit: int = const 3;
+  jmp .loop;
+.loop:
+  one: int = const 1;
+  x: int = add x one;
+  c: bool = lt x limit;
+  br c .loop .exit;
+.exit:
+  ret;
+}
+

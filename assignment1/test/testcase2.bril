@@ -1,0 +1,11 @@
+@main {
+.entry:
+  v: int = const 1;
+  br v .then .else;
+.then:
+  jmp .end;
+.else:
+  jmp .end;
+.end:
+  ret;
+}

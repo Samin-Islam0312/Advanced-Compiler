@@ -1,0 +1,9 @@
+@main {
+.entry:
+  ret;
+.after:
+  y: int = const 2;
+  print y;
+}
+
+

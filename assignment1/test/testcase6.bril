@@ -1,0 +1,14 @@
+@main {
+.entry:
+  c: bool = const 1;
+  br c .first .second;
+
+.first:
+  x: int = const 42;
+  jmp .second;
+
+.second:
+  y: int = const 7;
+  jmp .first;
+}
+

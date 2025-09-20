@@ -1,0 +1,8 @@
+@main {
+.entry:
+  jmp .loop;
+.loop:
+  v: int = const 0;
+  jmp .loop;
+}
+
