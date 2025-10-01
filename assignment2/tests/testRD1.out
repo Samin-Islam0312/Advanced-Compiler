@@ -1,0 +1,3 @@
+entry:
+  in:  ∅
+  out: a@entry:1, b@entry:2

@@ -1,0 +1,10 @@
+# ARGS: ae
+@main {
+.entry:
+  a: int = const 1;
+  b: int = const 2;
+  t: int = add a b;      # computed, then a is redefined
+  a: int = const 3;      # kills availability of add(a,b)
+  print t;
+}
+

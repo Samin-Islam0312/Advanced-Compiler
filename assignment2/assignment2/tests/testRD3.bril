@@ -1,0 +1,20 @@
+# ARGS: rd
+@main {
+.entry:
+  i: int = const 3;
+  s: int = const 1;
+  jmp .header;
+.header:
+  zero: int = const 0;
+  cond: bool = gt i zero;
+  br cond .body .exit;
+.body:
+  s: int = mul s i;
+  one: int = const 1;
+  i: int = sub i one;
+  jmp .header;
+.exit:
+  print s;
+}
+
+
