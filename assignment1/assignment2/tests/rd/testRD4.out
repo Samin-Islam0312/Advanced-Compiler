@@ -1,6 +1,0 @@
-entry:
-  in:  ∅
-  out: x@entry:0, y@entry:1
-next:
-  in:  x@entry:0, y@entry:1
-  out: x@next:0, y@next:1
