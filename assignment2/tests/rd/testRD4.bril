@@ -1,0 +1,13 @@
+# ARGS: rd
+@main {
+.entry:
+  x: int = const 1;
+  y: int = const 2;
+  jmp .next;
+.next:
+  x: int = add x y;      # new def of x
+  y: int = add x y;      # new def of y
+  print x;
+  print y;
+}
+

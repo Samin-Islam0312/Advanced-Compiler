@@ -1,0 +1,12 @@
+entry:
+  in:  ∅
+  out: c@entry:1, x@entry:0
+then:
+  in:  c@entry:1, x@entry:0
+  out: c@entry:1, x@then:0
+else:
+  in:  c@entry:1, x@entry:0
+  out: c@entry:1, x@else:0
+join:
+  in:  c@entry:1, x@else:0, x@then:0
+  out: c@entry:1, x@else:0, x@then:0, y@join:0

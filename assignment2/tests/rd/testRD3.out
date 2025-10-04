@@ -1,0 +1,12 @@
+entry:
+  in:  ∅
+  out: i@entry:0, s@entry:1
+header:
+  in:  cond@header:1, i@body:2, i@entry:0, one@body:1, s@body:0, s@entry:1, zero@header:0
+  out: cond@header:1, i@body:2, i@entry:0, one@body:1, s@body:0, s@entry:1, zero@header:0
+body:
+  in:  cond@header:1, i@body:2, i@entry:0, one@body:1, s@body:0, s@entry:1, zero@header:0
+  out: cond@header:1, i@body:2, one@body:1, s@body:0, zero@header:0
+exit:
+  in:  cond@header:1, i@body:2, i@entry:0, one@body:1, s@body:0, s@entry:1, zero@header:0
+  out: cond@header:1, i@body:2, i@entry:0, one@body:1, s@body:0, s@entry:1, zero@header:0

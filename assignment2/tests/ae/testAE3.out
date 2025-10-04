@@ -1,0 +1,12 @@
+entry:
+  in:  ∅
+  out: gt(a, b)
+then:
+  in:  gt(a, b)
+  out: add(a, b), gt(a, b)
+else:
+  in:  gt(a, b)
+  out: add(a, b), gt(a, b)
+join:
+  in:  add(a, b), gt(a, b)
+  out: add(a, b), gt(a, b)
