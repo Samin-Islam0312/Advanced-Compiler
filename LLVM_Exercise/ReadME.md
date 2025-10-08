@@ -1,3 +1,17 @@
+## Installed LLVM 21 via Homebrew
+Homebrew installs pre-compiled binaries for llvm@21 on macOS/Apple Silicon. Hence installation was fast and didnt take hours of compilation.
+```bash
+brew install llvm@21
+```
+
+## Setup environment variables (per-session)
+```bash
+export LLVM_PREFIX="$(brew --prefix llvm)"
+export PATH="$LLVM_PREFIX/bin:$PATH"
+export CC="$LLVM_PREFIX/bin/clang"
+export CXX="$LLVM_PREFIX/bin/clang++"
+```
+
 # Task 1: Put the IR into canonical SSA
 
 ## `matmul.c`
@@ -103,17 +117,6 @@ The goal of this task is to explore the LLVM infrastructure using the llvm-tutor
 ## Clone the llvm-tutor
 ```bash
 git clone https://github.com/banach-space/llvm-tutor.git
-```
-## Installed LLVM 21 via Homebrew:
-```bash
-brew install llvm@21
-```
-## Setup environment variables (per-session)
-```bash
-export LLVM_PREFIX="$(brew --prefix llvm)"
-export PATH="$LLVM_PREFIX/bin:$PATH"
-export CC="$LLVM_PREFIX/bin/clang"
-export CXX="$LLVM_PREFIX/bin/clang++"
 ```
 ## Build llvm-tutor
 ```bash
