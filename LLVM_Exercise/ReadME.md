@@ -40,16 +40,15 @@ dot -Tpdf dom.matmul.dot -o matmul_domtree.pdf
 ```bash
 opt -passes="print<loops>" ../../Task1/matmul/matmul.canonical.ll -disable-output
 ```
-### Expected output 
-```bash
-    Loop info for function 'matmul':
-    Loop at depth 1 containing: %4<header>,%5,%6,%18,%21,%26,%29,%30<latch><exiting>
-        Loop at depth 2 containing: %5<header>,%6,%18,%21,%26<latch><exiting>
-            Loop at depth 3 containing: %6<header>,%18<latch><exiting>
-    Loop info for function 'main':
-    Loop at depth 1 containing: %4<header>,%5,%18,%21,%22<latch><exiting>
-        Loop at depth 2 containing: %5<header>,%18<latch><exiting>
-```
+### Expected output \
+
+Loop info for function 'matmul':
+Loop at depth 1 containing: %4<header>,%5,%6,%18,%21,%26,%29,%30<latch><exiting>
+    Loop at depth 2 containing: %5<header>,%6,%18,%21,%26<latch><exiting>
+        Loop at depth 3 containing: %6<header>,%18<latch><exiting>
+Loop info for function 'main':
+Loop at depth 1 containing: %4<header>,%5,%18,%21,%22<latch><exiting>
+    Loop at depth 2 containing: %5<header>,%18<latch><exiting>\
 ### pass=loop-interchange
 ```bash
 opt -passes=loop-interchange ../../Task1/matmul/matmul_canonical.ll -S -o matmul_interchanged.ll
