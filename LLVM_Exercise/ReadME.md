@@ -16,19 +16,19 @@ export CXX="$LLVM_PREFIX/bin/clang++"
 
 ## `matmul.c`
 ```bash
-clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm inputs/matmul.c -o task1/matmul/matmul.ll
+$CC -O0 -Xclang -disable-O0-optnone -S -emit-llvm inputs/matmul.c -o task1/matmul/matmul.ll
 opt -S -passes="mem2reg,lcssa,loop-simplify,loop-rotate" task1/matmul/matmul.ll -o task1/matmul/matmul.canonical.ll
 ```
 
 ## `max.c`
 ```bash
-clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm inputs/max.c -o task1/max/max.ll
+$CC -O0 -Xclang -disable-O0-optnone -S -emit-llvm inputs/max.c -o task1/max/max.ll
 opt -S -passes="mem2reg,lcssa,loop-simplify,loop-rotate" task1/max/max.ll -o task1/max/max.canonical.ll
 ```
 
 ## `gcd.c`
 ```bash
-clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm inputs/gcd.c -o task1/gcd/gcd.ll
+$CC -O0 -Xclang -disable-O0-optnone -S -emit-llvm inputs/gcd.c -o task1/gcd/gcd.ll
 opt -S -passes="mem2reg,lcssa,loop-simplify,loop-rotate" task1/gcd/gcd.ll -o task1/gcd/gcd.canonical.ll
 ```
 
