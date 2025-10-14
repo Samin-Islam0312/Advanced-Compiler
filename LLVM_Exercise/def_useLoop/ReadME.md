@@ -5,7 +5,11 @@ The inputs can be found in the `../input` folder, from the previous class activi
 Emitting IR 
 ```bash 
 clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ../../inputs/matmul.c -o inputIR/matmul.ll
+```
+```bash 
 clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ../../inputs/max.c -o inputIR/max.ll
+```
+```bash 
 clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ../../inputs/gcd.c -o inputIR/gcd.ll
 ```
 ## Building the pass 
@@ -26,13 +30,21 @@ make
 ## Run the pass 
 ```bash 
 opt -load-pass-plugin build/DefUseChains.dylib -passes=def-use-chains inputIR/matmul.ll -disable-output
+```
+```bash
 opt -load-pass-plugin build/DefUseChains.dylib -passes=def-use-chains inputIR/max.ll -disable-output
+```
+```bash 
 opt -load-pass-plugin build/DefUseChains.dylib -passes=def-use-chains inputIR/gcd.ll -disable-output
 ```
 
  ```bash 
  opt -load-pass-plugin build/DefUseChains.dylib -passes=def-use-chains inputIR/matmul.ll -disable-output 2>&1 | tee output/defuse_matmul.log
+```
+```bash 
  opt -load-pass-plugin build/DefUseChains.dylib -passes=def-use-chains inputIR/max.ll -disable-output 2>&1 | tee output/defuse_max.log
+```
+```bash 
  opt -load-pass-plugin build/DefUseChains.dylib -passes=def-use-chains inputIR/gcd.ll -disable-output 2>&1 | tee output/defuse_gcd.log
 ```
 
@@ -73,15 +85,23 @@ make
 ## Run the pass, inputs are from the `canonical` folder
 ```bash 
 opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/matmul_canonical.ll -disable-output
+```
+```bash 
 opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/max_canonical.ll -disable-output
+```
+```bash 
 opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/gcd_canonical.ll -disable-output
 ```
 
 
 ## A. Printing preheader and latch, both outter and inner loops 
  ```bash 
- opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/matmul_canonical.ll -disable-output 
- opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/max_canonical.ll -disable-output 
+ opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/matmul_canonical.ll -disable-output
+```
+```bash 
+ opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/max_canonical.ll -disable-output
+```
+```bash 
  opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/gcd_canonical.ll -disable-output 
 ```
 
