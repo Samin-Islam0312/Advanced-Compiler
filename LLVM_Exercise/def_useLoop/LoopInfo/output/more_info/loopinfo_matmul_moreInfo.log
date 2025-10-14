@@ -1,0 +1,17 @@
+Analyzing function (recursive): matmul
+  Loop (depth 1) header: %4
+  preheader: %3
+  latch:     %30
+    Loop (depth 2) header: %5
+    preheader: %4
+    latch:     %26
+      Loop (depth 3) header: %6
+      preheader: %5
+      latch:     %18
+Analyzing function (recursive): main
+  Loop (depth 1) header: %4
+  preheader: %0
+  latch:     %22
+    Loop (depth 2) header: %5
+    preheader: %4
+    latch:     %18

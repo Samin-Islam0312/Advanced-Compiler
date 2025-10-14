@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
-project(DefUseChains LANGUAGES C CXX)
+project(LoopInfoExample LANGUAGES C CXX)
 
 find_package(LLVM REQUIRED CONFIG)
 
@@ -13,6 +13,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 include_directories(${LLVM_INCLUDE_DIRS})
 add_definitions(${LLVM_DEFINITIONS})
 
-add_llvm_pass_plugin(DefUseChains
-  DefUseChains.cpp
+add_llvm_pass_plugin(LoopInfoExample
+  LoopInfoExample.cpp
 )

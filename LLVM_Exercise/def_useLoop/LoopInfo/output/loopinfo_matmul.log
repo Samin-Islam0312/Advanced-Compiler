@@ -1,0 +1,6 @@
+Analyzing function: matmul
+  Found a loop with header: %4
+    Subloop with header: %5
+Analyzing function: main
+  Found a loop with header: %4
+    Subloop with header: %5

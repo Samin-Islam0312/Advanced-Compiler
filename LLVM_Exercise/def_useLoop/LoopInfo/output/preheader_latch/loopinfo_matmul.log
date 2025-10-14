@@ -1,0 +1,14 @@
+Analyzing function: matmul
+Found a loop with header: %4
+preheader: %3
+latch: %30
+Subloop with header: %5
+preheader: %4
+latch: %26
+Analyzing function: main
+Found a loop with header: %4
+preheader: %0
+latch: %22
+Subloop with header: %5
+preheader: %4
+latch: %18

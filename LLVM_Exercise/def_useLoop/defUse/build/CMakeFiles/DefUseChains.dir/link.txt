@@ -1,0 +1,1 @@
+/opt/homebrew/opt/llvm/bin/clang++ -O3 -DNDEBUG -arch arm64  -Wl,-dead_strip -Wl,-no_warn_duplicate_libraries -bundle -Wl,-headerpad_max_install_names -o DefUseChains.dylib CMakeFiles/DefUseChains.dir/DefUseChains.cpp.o  -Wl,-rpath,@loader_path/../lib -Wl,-rpath,/opt/homebrew/Cellar/llvm/21.1.2/lib /opt/homebrew/Cellar/llvm/21.1.2/lib/libLLVM.dylib

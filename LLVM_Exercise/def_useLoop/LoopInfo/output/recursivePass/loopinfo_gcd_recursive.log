@@ -1,0 +1,4 @@
+Analyzing function (recursive): gcd
+  Loop (depth 1) header: %4
+  preheader: %.lr.ph
+  latch:     %4

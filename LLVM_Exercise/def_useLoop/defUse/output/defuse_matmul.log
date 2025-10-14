@@ -1,0 +1,908 @@
+=============================
+Function: matmul
+=============================
+
+BasicBlock: %3
+
+[DEF]   %4 = alloca ptr, align 8
+   [used in]   %23 = load ptr, ptr %4, align 8
+   [used in]   store ptr %0, ptr %4, align 8
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %5 = alloca ptr, align 8
+   [used in]   %31 = load ptr, ptr %5, align 8
+   [used in]   store ptr %1, ptr %5, align 8
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %6 = alloca ptr, align 8
+   [used in]   %46 = load ptr, ptr %6, align 8
+   [used in]   store ptr %2, ptr %6, align 8
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %7 = alloca i32, align 4
+   [used in]   store i32 %59, ptr %7, align 4
+   [used in]   %58 = load i32, ptr %7, align 4
+   [used in]   %47 = load i32, ptr %7, align 4
+   [used in]   %24 = load i32, ptr %7, align 4
+   [used in]   %12 = load i32, ptr %7, align 4
+   [used in]   store i32 0, ptr %7, align 4
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %8 = alloca i32, align 4
+   [used in]   store i32 %55, ptr %8, align 4
+   [used in]   %54 = load i32, ptr %8, align 4
+   [used in]   %50 = load i32, ptr %8, align 4
+   [used in]   %35 = load i32, ptr %8, align 4
+   [used in]   %16 = load i32, ptr %8, align 4
+   [used in]   store i32 0, ptr %8, align 4
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %9 = alloca double, align 8
+   [used in]   %45 = load double, ptr %9, align 8
+   [used in]   store double %40, ptr %9, align 8
+   [used in]   %39 = load double, ptr %9, align 8
+   [used in]   store double 0.000000e+00, ptr %9, align 8
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %10 = alloca i32, align 4
+   [used in]   store i32 %43, ptr %10, align 4
+   [used in]   %42 = load i32, ptr %10, align 4
+   [used in]   %32 = load i32, ptr %10, align 4
+   [used in]   %27 = load i32, ptr %10, align 4
+   [used in]   %20 = load i32, ptr %10, align 4
+   [used in]   store i32 0, ptr %10, align 4
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   store ptr %0, ptr %4, align 8
+   (no uses)
+
+[USE]   [depends on defs:]
+      (function argument) 
+        %4 = alloca ptr, align 8
+
+[DEF]   store ptr %1, ptr %5, align 8
+   (no uses)
+
+[USE]   [depends on defs:]
+      (function argument) 
+        %5 = alloca ptr, align 8
+
+[DEF]   store ptr %2, ptr %6, align 8
+   (no uses)
+
+[USE]   [depends on defs:]
+      (function argument) 
+        %6 = alloca ptr, align 8
+
+[DEF]   store i32 0, ptr %7, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+      (constant)
+        %7 = alloca i32, align 4
+
+[DEF]   br label %11
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %11
+
+[DEF]   %12 = load i32, ptr %7, align 4
+   [used in]   %13 = icmp slt i32 %12, 512
+
+[USE]   [depends on defs:]
+        %7 = alloca i32, align 4
+
+[DEF]   %13 = icmp slt i32 %12, 512
+   [used in]   br i1 %13, label %14, label %60
+
+[USE]   [depends on defs:]
+        %12 = load i32, ptr %7, align 4
+      (constant)
+
+[DEF]   br i1 %13, label %14, label %60
+   (no uses)
+
+[USE]   [depends on defs:]
+        %13 = icmp slt i32 %12, 512
+
+BasicBlock: %14
+
+[DEF]   store i32 0, ptr %8, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+      (constant)
+        %8 = alloca i32, align 4
+
+[DEF]   br label %15
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %15
+
+[DEF]   %16 = load i32, ptr %8, align 4
+   [used in]   %17 = icmp slt i32 %16, 512
+
+[USE]   [depends on defs:]
+        %8 = alloca i32, align 4
+
+[DEF]   %17 = icmp slt i32 %16, 512
+   [used in]   br i1 %17, label %18, label %56
+
+[USE]   [depends on defs:]
+        %16 = load i32, ptr %8, align 4
+      (constant)
+
+[DEF]   br i1 %17, label %18, label %56
+   (no uses)
+
+[USE]   [depends on defs:]
+        %17 = icmp slt i32 %16, 512
+
+BasicBlock: %18
+
+[DEF]   store double 0.000000e+00, ptr %9, align 8
+   (no uses)
+
+[USE]   [depends on defs:]
+      (constant)
+        %9 = alloca double, align 8
+
+[DEF]   store i32 0, ptr %10, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+      (constant)
+        %10 = alloca i32, align 4
+
+[DEF]   br label %19
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %19
+
+[DEF]   %20 = load i32, ptr %10, align 4
+   [used in]   %21 = icmp slt i32 %20, 512
+
+[USE]   [depends on defs:]
+        %10 = alloca i32, align 4
+
+[DEF]   %21 = icmp slt i32 %20, 512
+   [used in]   br i1 %21, label %22, label %44
+
+[USE]   [depends on defs:]
+        %20 = load i32, ptr %10, align 4
+      (constant)
+
+[DEF]   br i1 %21, label %22, label %44
+   (no uses)
+
+[USE]   [depends on defs:]
+        %21 = icmp slt i32 %20, 512
+
+BasicBlock: %22
+
+[DEF]   %23 = load ptr, ptr %4, align 8
+   [used in]   %26 = getelementptr inbounds [512 x double], ptr %23, i64 %25
+
+[USE]   [depends on defs:]
+        %4 = alloca ptr, align 8
+
+[DEF]   %24 = load i32, ptr %7, align 4
+   [used in]   %25 = sext i32 %24 to i64
+
+[USE]   [depends on defs:]
+        %7 = alloca i32, align 4
+
+[DEF]   %25 = sext i32 %24 to i64
+   [used in]   %26 = getelementptr inbounds [512 x double], ptr %23, i64 %25
+
+[USE]   [depends on defs:]
+        %24 = load i32, ptr %7, align 4
+
+[DEF]   %26 = getelementptr inbounds [512 x double], ptr %23, i64 %25
+   [used in]   %29 = getelementptr inbounds [512 x double], ptr %26, i64 0, i64 %28
+
+[USE]   [depends on defs:]
+        %23 = load ptr, ptr %4, align 8
+        %25 = sext i32 %24 to i64
+
+[DEF]   %27 = load i32, ptr %10, align 4
+   [used in]   %28 = sext i32 %27 to i64
+
+[USE]   [depends on defs:]
+        %10 = alloca i32, align 4
+
+[DEF]   %28 = sext i32 %27 to i64
+   [used in]   %29 = getelementptr inbounds [512 x double], ptr %26, i64 0, i64 %28
+
+[USE]   [depends on defs:]
+        %27 = load i32, ptr %10, align 4
+
+[DEF]   %29 = getelementptr inbounds [512 x double], ptr %26, i64 0, i64 %28
+   [used in]   %30 = load double, ptr %29, align 8
+
+[USE]   [depends on defs:]
+        %26 = getelementptr inbounds [512 x double], ptr %23, i64 %25
+      (constant)
+        %28 = sext i32 %27 to i64
+
+[DEF]   %30 = load double, ptr %29, align 8
+   [used in]   %40 = call double @llvm.fmuladd.f64(double %30, double %38, double %39)
+
+[USE]   [depends on defs:]
+        %29 = getelementptr inbounds [512 x double], ptr %26, i64 0, i64 %28
+
+[DEF]   %31 = load ptr, ptr %5, align 8
+   [used in]   %34 = getelementptr inbounds [512 x double], ptr %31, i64 %33
+
+[USE]   [depends on defs:]
+        %5 = alloca ptr, align 8
+
+[DEF]   %32 = load i32, ptr %10, align 4
+   [used in]   %33 = sext i32 %32 to i64
+
+[USE]   [depends on defs:]
+        %10 = alloca i32, align 4
+
+[DEF]   %33 = sext i32 %32 to i64
+   [used in]   %34 = getelementptr inbounds [512 x double], ptr %31, i64 %33
+
+[USE]   [depends on defs:]
+        %32 = load i32, ptr %10, align 4
+
+[DEF]   %34 = getelementptr inbounds [512 x double], ptr %31, i64 %33
+   [used in]   %37 = getelementptr inbounds [512 x double], ptr %34, i64 0, i64 %36
+
+[USE]   [depends on defs:]
+        %31 = load ptr, ptr %5, align 8
+        %33 = sext i32 %32 to i64
+
+[DEF]   %35 = load i32, ptr %8, align 4
+   [used in]   %36 = sext i32 %35 to i64
+
+[USE]   [depends on defs:]
+        %8 = alloca i32, align 4
+
+[DEF]   %36 = sext i32 %35 to i64
+   [used in]   %37 = getelementptr inbounds [512 x double], ptr %34, i64 0, i64 %36
+
+[USE]   [depends on defs:]
+        %35 = load i32, ptr %8, align 4
+
+[DEF]   %37 = getelementptr inbounds [512 x double], ptr %34, i64 0, i64 %36
+   [used in]   %38 = load double, ptr %37, align 8
+
+[USE]   [depends on defs:]
+        %34 = getelementptr inbounds [512 x double], ptr %31, i64 %33
+      (constant)
+        %36 = sext i32 %35 to i64
+
+[DEF]   %38 = load double, ptr %37, align 8
+   [used in]   %40 = call double @llvm.fmuladd.f64(double %30, double %38, double %39)
+
+[USE]   [depends on defs:]
+        %37 = getelementptr inbounds [512 x double], ptr %34, i64 0, i64 %36
+
+[DEF]   %39 = load double, ptr %9, align 8
+   [used in]   %40 = call double @llvm.fmuladd.f64(double %30, double %38, double %39)
+
+[USE]   [depends on defs:]
+        %9 = alloca double, align 8
+
+[DEF]   %40 = call double @llvm.fmuladd.f64(double %30, double %38, double %39)
+   [used in]   store double %40, ptr %9, align 8
+
+[USE]   [depends on defs:]
+        %30 = load double, ptr %29, align 8
+        %38 = load double, ptr %37, align 8
+        %39 = load double, ptr %9, align 8
+      (constant)
+
+[DEF]   store double %40, ptr %9, align 8
+   (no uses)
+
+[USE]   [depends on defs:]
+        %40 = call double @llvm.fmuladd.f64(double %30, double %38, double %39)
+        %9 = alloca double, align 8
+
+[DEF]   br label %41
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %41
+
+[DEF]   %42 = load i32, ptr %10, align 4
+   [used in]   %43 = add nsw i32 %42, 1
+
+[USE]   [depends on defs:]
+        %10 = alloca i32, align 4
+
+[DEF]   %43 = add nsw i32 %42, 1
+   [used in]   store i32 %43, ptr %10, align 4
+
+[USE]   [depends on defs:]
+        %42 = load i32, ptr %10, align 4
+      (constant)
+
+[DEF]   store i32 %43, ptr %10, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+        %43 = add nsw i32 %42, 1
+        %10 = alloca i32, align 4
+
+[DEF]   br label %19, !llvm.loop !6
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %44
+
+[DEF]   %45 = load double, ptr %9, align 8
+   [used in]   store double %45, ptr %52, align 8
+
+[USE]   [depends on defs:]
+        %9 = alloca double, align 8
+
+[DEF]   %46 = load ptr, ptr %6, align 8
+   [used in]   %49 = getelementptr inbounds [512 x double], ptr %46, i64 %48
+
+[USE]   [depends on defs:]
+        %6 = alloca ptr, align 8
+
+[DEF]   %47 = load i32, ptr %7, align 4
+   [used in]   %48 = sext i32 %47 to i64
+
+[USE]   [depends on defs:]
+        %7 = alloca i32, align 4
+
+[DEF]   %48 = sext i32 %47 to i64
+   [used in]   %49 = getelementptr inbounds [512 x double], ptr %46, i64 %48
+
+[USE]   [depends on defs:]
+        %47 = load i32, ptr %7, align 4
+
+[DEF]   %49 = getelementptr inbounds [512 x double], ptr %46, i64 %48
+   [used in]   %52 = getelementptr inbounds [512 x double], ptr %49, i64 0, i64 %51
+
+[USE]   [depends on defs:]
+        %46 = load ptr, ptr %6, align 8
+        %48 = sext i32 %47 to i64
+
+[DEF]   %50 = load i32, ptr %8, align 4
+   [used in]   %51 = sext i32 %50 to i64
+
+[USE]   [depends on defs:]
+        %8 = alloca i32, align 4
+
+[DEF]   %51 = sext i32 %50 to i64
+   [used in]   %52 = getelementptr inbounds [512 x double], ptr %49, i64 0, i64 %51
+
+[USE]   [depends on defs:]
+        %50 = load i32, ptr %8, align 4
+
+[DEF]   %52 = getelementptr inbounds [512 x double], ptr %49, i64 0, i64 %51
+   [used in]   store double %45, ptr %52, align 8
+
+[USE]   [depends on defs:]
+        %49 = getelementptr inbounds [512 x double], ptr %46, i64 %48
+      (constant)
+        %51 = sext i32 %50 to i64
+
+[DEF]   store double %45, ptr %52, align 8
+   (no uses)
+
+[USE]   [depends on defs:]
+        %45 = load double, ptr %9, align 8
+        %52 = getelementptr inbounds [512 x double], ptr %49, i64 0, i64 %51
+
+[DEF]   br label %53
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %53
+
+[DEF]   %54 = load i32, ptr %8, align 4
+   [used in]   %55 = add nsw i32 %54, 1
+
+[USE]   [depends on defs:]
+        %8 = alloca i32, align 4
+
+[DEF]   %55 = add nsw i32 %54, 1
+   [used in]   store i32 %55, ptr %8, align 4
+
+[USE]   [depends on defs:]
+        %54 = load i32, ptr %8, align 4
+      (constant)
+
+[DEF]   store i32 %55, ptr %8, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+        %55 = add nsw i32 %54, 1
+        %8 = alloca i32, align 4
+
+[DEF]   br label %15, !llvm.loop !8
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %56
+
+[DEF]   br label %57
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %57
+
+[DEF]   %58 = load i32, ptr %7, align 4
+   [used in]   %59 = add nsw i32 %58, 1
+
+[USE]   [depends on defs:]
+        %7 = alloca i32, align 4
+
+[DEF]   %59 = add nsw i32 %58, 1
+   [used in]   store i32 %59, ptr %7, align 4
+
+[USE]   [depends on defs:]
+        %58 = load i32, ptr %7, align 4
+      (constant)
+
+[DEF]   store i32 %59, ptr %7, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+        %59 = add nsw i32 %58, 1
+        %7 = alloca i32, align 4
+
+[DEF]   br label %11, !llvm.loop !9
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %60
+
+[DEF]   ret void
+   (no uses)
+
+[USE]   [depends on defs:]
+
+=============================
+Function: main
+=============================
+
+BasicBlock: %0
+
+[DEF]   %1 = alloca i32, align 4
+   [used in]   store i32 0, ptr %1, align 4
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %2 = alloca [512 x [512 x double]], align 8
+   [used in]   %43 = getelementptr inbounds [512 x [512 x double]], ptr %2, i64 0, i64 0
+   [used in]   %21 = getelementptr inbounds [512 x [512 x double]], ptr %2, i64 0, i64 %20
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %3 = alloca [512 x [512 x double]], align 8
+   [used in]   %44 = getelementptr inbounds [512 x [512 x double]], ptr %3, i64 0, i64 0
+   [used in]   %31 = getelementptr inbounds [512 x [512 x double]], ptr %3, i64 0, i64 %30
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %4 = alloca [512 x [512 x double]], align 8
+   [used in]   %46 = getelementptr inbounds [512 x [512 x double]], ptr %4, i64 0, i64 511
+   [used in]   %45 = getelementptr inbounds [512 x [512 x double]], ptr %4, i64 0, i64 0
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %5 = alloca i32, align 4
+   [used in]   store i32 %41, ptr %5, align 4
+   [used in]   %40 = load i32, ptr %5, align 4
+   [used in]   %29 = load i32, ptr %5, align 4
+   [used in]   %25 = load i32, ptr %5, align 4
+   [used in]   %19 = load i32, ptr %5, align 4
+   [used in]   %15 = load i32, ptr %5, align 4
+   [used in]   %8 = load i32, ptr %5, align 4
+   [used in]   store i32 0, ptr %5, align 4
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %6 = alloca i32, align 4
+   [used in]   store i32 %37, ptr %6, align 4
+   [used in]   %36 = load i32, ptr %6, align 4
+   [used in]   %32 = load i32, ptr %6, align 4
+   [used in]   %26 = load i32, ptr %6, align 4
+   [used in]   %22 = load i32, ptr %6, align 4
+   [used in]   %16 = load i32, ptr %6, align 4
+   [used in]   %12 = load i32, ptr %6, align 4
+   [used in]   store i32 0, ptr %6, align 4
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   store i32 0, ptr %1, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+      (constant)
+        %1 = alloca i32, align 4
+
+[DEF]   store i32 0, ptr %5, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+      (constant)
+        %5 = alloca i32, align 4
+
+[DEF]   br label %7
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %7
+
+[DEF]   %8 = load i32, ptr %5, align 4
+   [used in]   %9 = icmp slt i32 %8, 512
+
+[USE]   [depends on defs:]
+        %5 = alloca i32, align 4
+
+[DEF]   %9 = icmp slt i32 %8, 512
+   [used in]   br i1 %9, label %10, label %42
+
+[USE]   [depends on defs:]
+        %8 = load i32, ptr %5, align 4
+      (constant)
+
+[DEF]   br i1 %9, label %10, label %42
+   (no uses)
+
+[USE]   [depends on defs:]
+        %9 = icmp slt i32 %8, 512
+
+BasicBlock: %10
+
+[DEF]   store i32 0, ptr %6, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+      (constant)
+        %6 = alloca i32, align 4
+
+[DEF]   br label %11
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %11
+
+[DEF]   %12 = load i32, ptr %6, align 4
+   [used in]   %13 = icmp slt i32 %12, 512
+
+[USE]   [depends on defs:]
+        %6 = alloca i32, align 4
+
+[DEF]   %13 = icmp slt i32 %12, 512
+   [used in]   br i1 %13, label %14, label %38
+
+[USE]   [depends on defs:]
+        %12 = load i32, ptr %6, align 4
+      (constant)
+
+[DEF]   br i1 %13, label %14, label %38
+   (no uses)
+
+[USE]   [depends on defs:]
+        %13 = icmp slt i32 %12, 512
+
+BasicBlock: %14
+
+[DEF]   %15 = load i32, ptr %5, align 4
+   [used in]   %17 = add nsw i32 %15, %16
+
+[USE]   [depends on defs:]
+        %5 = alloca i32, align 4
+
+[DEF]   %16 = load i32, ptr %6, align 4
+   [used in]   %17 = add nsw i32 %15, %16
+
+[USE]   [depends on defs:]
+        %6 = alloca i32, align 4
+
+[DEF]   %17 = add nsw i32 %15, %16
+   [used in]   %18 = sitofp i32 %17 to double
+
+[USE]   [depends on defs:]
+        %15 = load i32, ptr %5, align 4
+        %16 = load i32, ptr %6, align 4
+
+[DEF]   %18 = sitofp i32 %17 to double
+   [used in]   store double %18, ptr %24, align 8
+
+[USE]   [depends on defs:]
+        %17 = add nsw i32 %15, %16
+
+[DEF]   %19 = load i32, ptr %5, align 4
+   [used in]   %20 = sext i32 %19 to i64
+
+[USE]   [depends on defs:]
+        %5 = alloca i32, align 4
+
+[DEF]   %20 = sext i32 %19 to i64
+   [used in]   %21 = getelementptr inbounds [512 x [512 x double]], ptr %2, i64 0, i64 %20
+
+[USE]   [depends on defs:]
+        %19 = load i32, ptr %5, align 4
+
+[DEF]   %21 = getelementptr inbounds [512 x [512 x double]], ptr %2, i64 0, i64 %20
+   [used in]   %24 = getelementptr inbounds [512 x double], ptr %21, i64 0, i64 %23
+
+[USE]   [depends on defs:]
+        %2 = alloca [512 x [512 x double]], align 8
+      (constant)
+        %20 = sext i32 %19 to i64
+
+[DEF]   %22 = load i32, ptr %6, align 4
+   [used in]   %23 = sext i32 %22 to i64
+
+[USE]   [depends on defs:]
+        %6 = alloca i32, align 4
+
+[DEF]   %23 = sext i32 %22 to i64
+   [used in]   %24 = getelementptr inbounds [512 x double], ptr %21, i64 0, i64 %23
+
+[USE]   [depends on defs:]
+        %22 = load i32, ptr %6, align 4
+
+[DEF]   %24 = getelementptr inbounds [512 x double], ptr %21, i64 0, i64 %23
+   [used in]   store double %18, ptr %24, align 8
+
+[USE]   [depends on defs:]
+        %21 = getelementptr inbounds [512 x [512 x double]], ptr %2, i64 0, i64 %20
+      (constant)
+        %23 = sext i32 %22 to i64
+
+[DEF]   store double %18, ptr %24, align 8
+   (no uses)
+
+[USE]   [depends on defs:]
+        %18 = sitofp i32 %17 to double
+        %24 = getelementptr inbounds [512 x double], ptr %21, i64 0, i64 %23
+
+[DEF]   %25 = load i32, ptr %5, align 4
+   [used in]   %27 = sub nsw i32 %25, %26
+
+[USE]   [depends on defs:]
+        %5 = alloca i32, align 4
+
+[DEF]   %26 = load i32, ptr %6, align 4
+   [used in]   %27 = sub nsw i32 %25, %26
+
+[USE]   [depends on defs:]
+        %6 = alloca i32, align 4
+
+[DEF]   %27 = sub nsw i32 %25, %26
+   [used in]   %28 = sitofp i32 %27 to double
+
+[USE]   [depends on defs:]
+        %25 = load i32, ptr %5, align 4
+        %26 = load i32, ptr %6, align 4
+
+[DEF]   %28 = sitofp i32 %27 to double
+   [used in]   store double %28, ptr %34, align 8
+
+[USE]   [depends on defs:]
+        %27 = sub nsw i32 %25, %26
+
+[DEF]   %29 = load i32, ptr %5, align 4
+   [used in]   %30 = sext i32 %29 to i64
+
+[USE]   [depends on defs:]
+        %5 = alloca i32, align 4
+
+[DEF]   %30 = sext i32 %29 to i64
+   [used in]   %31 = getelementptr inbounds [512 x [512 x double]], ptr %3, i64 0, i64 %30
+
+[USE]   [depends on defs:]
+        %29 = load i32, ptr %5, align 4
+
+[DEF]   %31 = getelementptr inbounds [512 x [512 x double]], ptr %3, i64 0, i64 %30
+   [used in]   %34 = getelementptr inbounds [512 x double], ptr %31, i64 0, i64 %33
+
+[USE]   [depends on defs:]
+        %3 = alloca [512 x [512 x double]], align 8
+      (constant)
+        %30 = sext i32 %29 to i64
+
+[DEF]   %32 = load i32, ptr %6, align 4
+   [used in]   %33 = sext i32 %32 to i64
+
+[USE]   [depends on defs:]
+        %6 = alloca i32, align 4
+
+[DEF]   %33 = sext i32 %32 to i64
+   [used in]   %34 = getelementptr inbounds [512 x double], ptr %31, i64 0, i64 %33
+
+[USE]   [depends on defs:]
+        %32 = load i32, ptr %6, align 4
+
+[DEF]   %34 = getelementptr inbounds [512 x double], ptr %31, i64 0, i64 %33
+   [used in]   store double %28, ptr %34, align 8
+
+[USE]   [depends on defs:]
+        %31 = getelementptr inbounds [512 x [512 x double]], ptr %3, i64 0, i64 %30
+      (constant)
+        %33 = sext i32 %32 to i64
+
+[DEF]   store double %28, ptr %34, align 8
+   (no uses)
+
+[USE]   [depends on defs:]
+        %28 = sitofp i32 %27 to double
+        %34 = getelementptr inbounds [512 x double], ptr %31, i64 0, i64 %33
+
+[DEF]   br label %35
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %35
+
+[DEF]   %36 = load i32, ptr %6, align 4
+   [used in]   %37 = add nsw i32 %36, 1
+
+[USE]   [depends on defs:]
+        %6 = alloca i32, align 4
+
+[DEF]   %37 = add nsw i32 %36, 1
+   [used in]   store i32 %37, ptr %6, align 4
+
+[USE]   [depends on defs:]
+        %36 = load i32, ptr %6, align 4
+      (constant)
+
+[DEF]   store i32 %37, ptr %6, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+        %37 = add nsw i32 %36, 1
+        %6 = alloca i32, align 4
+
+[DEF]   br label %11, !llvm.loop !6
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %38
+
+[DEF]   br label %39
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %39
+
+[DEF]   %40 = load i32, ptr %5, align 4
+   [used in]   %41 = add nsw i32 %40, 1
+
+[USE]   [depends on defs:]
+        %5 = alloca i32, align 4
+
+[DEF]   %41 = add nsw i32 %40, 1
+   [used in]   store i32 %41, ptr %5, align 4
+
+[USE]   [depends on defs:]
+        %40 = load i32, ptr %5, align 4
+      (constant)
+
+[DEF]   store i32 %41, ptr %5, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+        %41 = add nsw i32 %40, 1
+        %5 = alloca i32, align 4
+
+[DEF]   br label %7, !llvm.loop !8
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %42
+
+[DEF]   %43 = getelementptr inbounds [512 x [512 x double]], ptr %2, i64 0, i64 0
+   [used in]   call void @matmul(ptr noundef %43, ptr noundef %44, ptr noundef %45)
+
+[USE]   [depends on defs:]
+        %2 = alloca [512 x [512 x double]], align 8
+      (constant)
+      (constant)
+
+[DEF]   %44 = getelementptr inbounds [512 x [512 x double]], ptr %3, i64 0, i64 0
+   [used in]   call void @matmul(ptr noundef %43, ptr noundef %44, ptr noundef %45)
+
+[USE]   [depends on defs:]
+        %3 = alloca [512 x [512 x double]], align 8
+      (constant)
+      (constant)
+
+[DEF]   %45 = getelementptr inbounds [512 x [512 x double]], ptr %4, i64 0, i64 0
+   [used in]   call void @matmul(ptr noundef %43, ptr noundef %44, ptr noundef %45)
+
+[USE]   [depends on defs:]
+        %4 = alloca [512 x [512 x double]], align 8
+      (constant)
+      (constant)
+
+[DEF]   call void @matmul(ptr noundef %43, ptr noundef %44, ptr noundef %45)
+   (no uses)
+
+[USE]   [depends on defs:]
+        %43 = getelementptr inbounds [512 x [512 x double]], ptr %2, i64 0, i64 0
+        %44 = getelementptr inbounds [512 x [512 x double]], ptr %3, i64 0, i64 0
+        %45 = getelementptr inbounds [512 x [512 x double]], ptr %4, i64 0, i64 0
+      (constant)
+
+[DEF]   %46 = getelementptr inbounds [512 x [512 x double]], ptr %4, i64 0, i64 511
+   [used in]   %47 = getelementptr inbounds [512 x double], ptr %46, i64 0, i64 511
+
+[USE]   [depends on defs:]
+        %4 = alloca [512 x [512 x double]], align 8
+      (constant)
+      (constant)
+
+[DEF]   %47 = getelementptr inbounds [512 x double], ptr %46, i64 0, i64 511
+   [used in]   %48 = load double, ptr %47, align 8
+
+[USE]   [depends on defs:]
+        %46 = getelementptr inbounds [512 x [512 x double]], ptr %4, i64 0, i64 511
+      (constant)
+      (constant)
+
+[DEF]   %48 = load double, ptr %47, align 8
+   [used in]   %49 = call i32 (ptr, ...) @printf(ptr noundef @.str, double noundef %48)
+
+[USE]   [depends on defs:]
+        %47 = getelementptr inbounds [512 x double], ptr %46, i64 0, i64 511
+
+[DEF]   %49 = call i32 (ptr, ...) @printf(ptr noundef @.str, double noundef %48)
+   (no uses)
+
+[USE]   [depends on defs:]
+      (constant)
+        %48 = load double, ptr %47, align 8
+      (constant)
+
+[DEF]   ret i32 0
+   (no uses)
+
+[USE]   [depends on defs:]
+      (constant)
+

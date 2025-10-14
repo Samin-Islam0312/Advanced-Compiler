@@ -1,0 +1,4 @@
+Analyzing function: gcd
+Found a loop with header: %4
+preheader: %.lr.ph
+latch: %4

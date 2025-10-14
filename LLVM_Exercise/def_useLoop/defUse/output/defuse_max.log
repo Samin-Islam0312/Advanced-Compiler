@@ -1,0 +1,123 @@
+=============================
+Function: max
+=============================
+
+BasicBlock: %2
+
+[DEF]   %3 = alloca i32, align 4
+   [used in]   %14 = load i32, ptr %3, align 4
+   [used in]   store i32 %12, ptr %3, align 4
+   [used in]   store i32 %10, ptr %3, align 4
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %4 = alloca i32, align 4
+   [used in]   %10 = load i32, ptr %4, align 4
+   [used in]   %6 = load i32, ptr %4, align 4
+   [used in]   store i32 %0, ptr %4, align 4
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   %5 = alloca i32, align 4
+   [used in]   %12 = load i32, ptr %5, align 4
+   [used in]   %7 = load i32, ptr %5, align 4
+   [used in]   store i32 %1, ptr %5, align 4
+
+[USE]   [depends on defs:]
+      (constant)
+
+[DEF]   store i32 %0, ptr %4, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+      (function argument) 
+        %4 = alloca i32, align 4
+
+[DEF]   store i32 %1, ptr %5, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+      (function argument) 
+        %5 = alloca i32, align 4
+
+[DEF]   %6 = load i32, ptr %4, align 4
+   [used in]   %8 = icmp sgt i32 %6, %7
+
+[USE]   [depends on defs:]
+        %4 = alloca i32, align 4
+
+[DEF]   %7 = load i32, ptr %5, align 4
+   [used in]   %8 = icmp sgt i32 %6, %7
+
+[USE]   [depends on defs:]
+        %5 = alloca i32, align 4
+
+[DEF]   %8 = icmp sgt i32 %6, %7
+   [used in]   br i1 %8, label %9, label %11
+
+[USE]   [depends on defs:]
+        %6 = load i32, ptr %4, align 4
+        %7 = load i32, ptr %5, align 4
+
+[DEF]   br i1 %8, label %9, label %11
+   (no uses)
+
+[USE]   [depends on defs:]
+        %8 = icmp sgt i32 %6, %7
+
+BasicBlock: %9
+
+[DEF]   %10 = load i32, ptr %4, align 4
+   [used in]   store i32 %10, ptr %3, align 4
+
+[USE]   [depends on defs:]
+        %4 = alloca i32, align 4
+
+[DEF]   store i32 %10, ptr %3, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+        %10 = load i32, ptr %4, align 4
+        %3 = alloca i32, align 4
+
+[DEF]   br label %13
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %11
+
+[DEF]   %12 = load i32, ptr %5, align 4
+   [used in]   store i32 %12, ptr %3, align 4
+
+[USE]   [depends on defs:]
+        %5 = alloca i32, align 4
+
+[DEF]   store i32 %12, ptr %3, align 4
+   (no uses)
+
+[USE]   [depends on defs:]
+        %12 = load i32, ptr %5, align 4
+        %3 = alloca i32, align 4
+
+[DEF]   br label %13
+   (no uses)
+
+[USE]   [depends on defs:]
+
+BasicBlock: %13
+
+[DEF]   %14 = load i32, ptr %3, align 4
+   [used in]   ret i32 %14
+
+[USE]   [depends on defs:]
+        %3 = alloca i32, align 4
+
+[DEF]   ret i32 %14
+   (no uses)
+
+[USE]   [depends on defs:]
+        %14 = load i32, ptr %3, align 4
+
