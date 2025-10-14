@@ -23,7 +23,7 @@ define void @matmul(ptr noundef %0, ptr noundef %1, ptr noundef %2) #0 {
 11:                                               ; preds = %57, %3
   %12 = load i32, ptr %7, align 4
   %13 = icmp slt i32 %12, 512
-  br i1 %13, label %14, label %60
+  br i1 %13, label %14, label %60       ; this is a loop 
 
 14:                                               ; preds = %11
   store i32 0, ptr %8, align 4

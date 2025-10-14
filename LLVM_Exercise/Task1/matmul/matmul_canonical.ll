@@ -20,14 +20,14 @@ define void @matmul(ptr noundef %0, ptr noundef %1, ptr noundef %2) #0 {
 6:                                                ; preds = %5, %18
   %.05 = phi i32 [ 0, %5 ], [ %19, %18 ]
   %.014 = phi double [ 0.000000e+00, %5 ], [ %17, %18 ]
-  %7 = sext i32 %.037 to i64
-  %8 = getelementptr inbounds [512 x double], ptr %0, i64 %7
+  %7 = sext i32 %.037 to i64                                          ;hoisted 
+  %8 = getelementptr inbounds [512 x double], ptr %0, i64 %7          ;hoisted 
   %9 = sext i32 %.05 to i64
   %10 = getelementptr inbounds [512 x double], ptr %8, i64 0, i64 %9
   %11 = load double, ptr %10, align 8
   %12 = sext i32 %.05 to i64
   %13 = getelementptr inbounds [512 x double], ptr %1, i64 %12
-  %14 = sext i32 %.026 to i64
+  %14 = sext i32 %.026 to i64                                          ;hoisted 
   %15 = getelementptr inbounds [512 x double], ptr %13, i64 0, i64 %14
   %16 = load double, ptr %15, align 8
   %17 = call double @llvm.fmuladd.f64(double %11, double %16, double %.014)
