@@ -1,6 +1,7 @@
-# How to build the project 
-Find the llvm-tu
-# Pass 1: DefUseChain Pass
+# Inputs
+The inputs can be found in the `../input` folder, from the previous class activity provided by the instructor. The passes and asked results can be found in the passes' respective files, `defUse` and `LoopInfo`. 
+
+# Pass 1: DefUseChain Pass, inside `defUse`
 Emitting IR 
 ```bash 
 clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ../../inputs/matmul.c -o inputIR/matmul.ll
@@ -35,9 +36,9 @@ opt -load-pass-plugin build/DefUseChains.dylib -passes=def-use-chains inputIR/gc
  opt -load-pass-plugin build/DefUseChains.dylib -passes=def-use-chains inputIR/gcd.ll -disable-output 2>&1 | tee output/defuse_gcd.log
 ```
 
-# Pass 2: Loop Info
+# Pass 2: Loop Info, inside `LoopInfo`
 
-## Canonicalizing inputs 
+## Canonicalizing inputs, inside `canonical`
 
 ### `matmul.c`
 ```bash
@@ -69,57 +70,31 @@ cmake -DCMAKE_C_COMPILER="$CC" \
 make 
 ```
 
-## Run the pass 
+## Run the pass, inputs are from the `canonical` folder
 ```bash 
 opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/matmul_canonical.ll -disable-output
 opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/max_canonical.ll -disable-output
 opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/gcd_canonical.ll -disable-output
 ```
 
- ```bash 
- opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/matmul_canonical.ll -disable-output 2>&1 | tee output/loopinfo_matmul.log
- opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/max_canonical.ll -disable-output 2>&1 | tee output/loopinfo_max.log
- opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/gcd_canonical.ll -disable-output 2>&1 | tee output/loopinfo_gcd.log
-```
-
-
 
 ## A. Printing preheader and latch, both outter and inner loops 
  ```bash 
- opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/matmul_canonical.ll -disable-output 2>&1 | tee output/preheader_latch/loopinfo_matmul.log
- opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/max_canonical.ll -disable-output 2>&1 | tee output/preheader_latch/loopinfo_max.log
- opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/gcd_canonical.ll -disable-output 2>&1 | tee output/preheader_latch/loopinfo_gcd.log
+ opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/matmul_canonical.ll -disable-output 
+ opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/max_canonical.ll -disable-output 
+ opt -load-pass-plugin build/LoopInfoExample.dylib -passes=loop-info-example canonical/gcd_canonical.ll -disable-output 
 ```
 
-
-
-## A. Printing out the loop information
-
-```bash  
--passes='print<loops>'
-opt input.ll -passes=’function<my-passig>'
-
--passes-'-loop-simplify'
-fixirreducible
--lcssa
-SCEV
-loop-rotate
-
-
-```
 
 ## B. Implementation for the recursively call of `getSubLoops()`
 ```bash 
-opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" \
-    canonical/matmul_canonical.ll -disable-output 2>&1 | tee output/recursivePass/loopinfo_matmul_recursive.log
+opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" canonical/matmul_canonical.ll -disable-output 
 ```
 ```bash
-opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" \
-    canonical/max_canonical.ll -disable-output 2>&1 | tee output/recursivePass/loopinfo_max_recursive.log
+opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" canonical/max_canonical.ll -disable-output 
 ```
 ```bash
-opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" \
-    canonical/gcd_canonical.ll -disable-output 2>&1 | tee output/recursivePass/loopinfo_gcd_recursive.log
+opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" canonical/gcd_canonical.ll -disable-output 
 ```
 
 ## C. More loop information
@@ -127,14 +102,11 @@ opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop"
 I printed _ _ information in the iterative loop info pass, not in the recursive one 
 
 ```bash 
-opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" \
-    canonical/matmul_canonical.ll -disable-output 2>&1 | tee output/more_info/loopinfo_matmul_moreInfo.log
+opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" canonical/matmul_canonical.ll -disable-output 
 ```
 ```bash
-opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" \
-    canonical/max_canonical.ll -disable-output 2>&1 | tee output/more_info/loopinfo_max_moreInfo.log
+opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" canonical/max_canonical.ll -disable-output 
 ```
 ```bash
-opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" \
-    canonical/gcd_canonical.ll -disable-output 2>&1 | tee output/more_info/loopinfo_gcd_moreInfo.log
+opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" canonical/gcd_canonical.ll -disable-output 
 ```
