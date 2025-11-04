@@ -1,6 +1,8 @@
 # Induction Variable
 This pass uses ScalarEvolution to identify induction variables (as SCEVAddRecExpr) in both outer and inner loops. For each detected induction PHI, it attempts to eliminate it by rewriting its uses using `SCEVExpander::expandCodeFor`. In practice, for canonical primary IV PHIs, the expander often reuses the existing PHI value, so the IR does not change textually, even though the pass conceptually rewrites the uses.
 
+The extended pass is insider the derived folder, and the affine folder is the pass that has been provied by the instructor as a helper pass to do the assignmetn.
+
 ## Export
 ```bash
 export LLVM_PREFIX="$(brew --prefix llvm)"
@@ -49,4 +51,5 @@ opt -load-pass-plugin ./build/DerivedInductionVar.dylib -passes=derived-iv -S \
 opt -load-pass-plugin ./build/DerivedInductionVar.dylib -passes=derived-iv -S \
     -o output/case2.ll ./tests/testcase2_canonical.ll
 ```
+
 
