@@ -58,7 +58,6 @@ opt -S -passes="mem2reg,lcssa,loop-simplify,loop-rotate" ../defUse/inputIR/gcd.l
 ```bash
 mkdir build && cd build 
 ```
-
 ```bash
 cmake -DCMAKE_C_COMPILER="$CC" \
       -DCMAKE_CXX_COMPILER="$CXX" \
@@ -124,7 +123,18 @@ opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop"
 
 ## C. More loop information
 
-I printed _ _ information in the iterative loop info pass, not in the recursive one 
+## C. More Loop Information
+
+I printed the additional information below in the **iterative loop info pass**, not in the recursive one:
+
+- **depth** — `L->getLoopDepth()`: nesting depth (1 = outermost).  
+- **blocks** — `L->getBlocks().size()`: number of basic blocks in the loop.  
+- **backedges** — `L->getNumBackEdges()`: count of edges that branch back to the header.  
+- **outermost / innermost** — `L->isOutermost()`, `L->isInnermost()`: whether the loop is at the top or has no subloops.  
+- **exiting blocks** — `L->getExitingBlocks(...)`: blocks inside the loop from which control can exit the loop.  
+- **exit blocks** — `L->getExitBlocks(...)`: blocks outside the loop that are targets of exits.  
+
+### Commands to run the pass after building and compiling
 
 ```bash 
 opt -load-pass-plugin build/LoopInfoExample.dylib -passes="recursive_getSubLoop" \
