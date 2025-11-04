@@ -1,0 +1,14 @@
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/intrinsics_gen.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/vt_gen.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/omp_gen.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/acc_gen.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/target_parser_gen.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/SimpleLICM.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/install-SimpleLICM.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/install-SimpleLICM-stripped.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/edit_cache.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/rebuild_cache.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/list_install_components.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/install.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/install/local.dir
+/Users/lazyeater/bril/adv_compiler/LLVM_assginment1/SimpleLICM/build/CMakeFiles/install/strip.dir
