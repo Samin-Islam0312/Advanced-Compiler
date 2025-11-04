@@ -12,3 +12,6 @@ Inside the Induction folder. Two example codes were provied by the instructor; `
 - Extend the pass into a transformation pass called that actually eliminates the induction variables.
 
 Implement and test in the llvm-tutor infrastructure so that the instructor can use that infrastructure to build and test your pass. 
+
+## Structure
+I have kept my work separate into these two folders. But I have also kept llvm-tutor folder adding my two passes as it was mentioned in the assignment. 
