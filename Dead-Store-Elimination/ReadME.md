@@ -1,5 +1,11 @@
 # MemorySSA - Dead Store Elimination
 ## Directory description
+- The extension of the pass - MemorySSAGraph.cpp, run on the test files that have been provided by the instructor in the `irFiles` directory, containing simplified IR files of those test files. 
+
+- Dead store elimination pass - In the Dead store elimination folder.
+- Simplieid IR files - compiled IR files are gone through the pass `mem2reg`
+
+- Test set - in the `tests` folder, there are 2 separate folders, naming `mustAnalysis` and `mayAnalysis` where 3 testcases are provided. In each folders, there is a folder for IR vertsions of those testcases, under the name of `irFiles`. These ir files are not simplified, meaning these are not gone through the `mem2reg` pass.
 
 ## Compiling the demo pass 
 ```bash
