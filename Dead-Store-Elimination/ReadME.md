@@ -4,9 +4,13 @@
 
 - Dead store elimination pass - In the Dead store elimination folder.
 - Simplieid IR files - compiled IR files are gone through the pass `mem2reg`
+- irFiles folder - containing the IR versions of the testcases provided for the assignment 
 
-- Test set - in the `tests` folder, there are 2 separate folders, naming `mustAnalysis` and `mayAnalysis` where 3 testcases are provided. In each folders, there is a folder for IR vertsions of those testcases, under the name of `irFiles`. These ir files are not simplified, meaning these are not gone through the `mem2reg` pass.
-
+- Test set - in the `tests` folder, there are 2 separate folders, naming `mustAnalysis` and `mayAnalysis` where 3 testcases are provided by me. In each folders, there is a folder for IR vertsions of those testcases, under the name of `irFiles`. These ir files are not simplified, meaning these are not gone through the `mem2reg` pass.
+  
+- dylib folder - containing the built passes as dynamic libraries
+- graphs folder - contains the graphical representations of the testcases in respect to memorySSA. As asked for the results of the pass `MemorySSAGraph`.
+  
 ## Compiling the demo pass 
 ```bash
 clang++ -std=c++17 -fPIC -shared MemorySSADemo.cpp -o dylibs/libMemorySSADemo.dylib $(llvm-config --cxxflags --ldflags) -lLLVM 
