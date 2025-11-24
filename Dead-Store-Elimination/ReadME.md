@@ -192,3 +192,39 @@ clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm tests/task5_tests/mustAnalys
 ```
 
 ## Run the pass on the IR files 
+```bash
+opt -load-pass-plugin dylibs/libMemorySSADSE.dylib \                                                  
+    -passes=mem2reg,memssa-dse \
+    tests/task5_tests/mayAnalysis/irFiles/test1.ll \
+    -disable-output
+```
+and the output 
+
+```bash
+Running MemorySSADSEPass on function: dse_may1
+```
+```bash
+opt -load-pass-plugin dylibs/libMemorySSADSE.dylib \
+-passes=mem2reg,memssa-dse \
+tests/task5_tests/mustAnalysis/irFiles/test1.ll \
+-disable-output
+```
+And the output
+```bash
+Running MemorySSADSEPass on function: dse_must1
+  DSE: removing dead store:   store i32 10, ptr %0, align 4
+```
+
+```bash
+opt -load-pass-plugin dylibs/libMemorySSADSE.dylib \
+-passes=mem2reg,memssa-dse \
+tests/task5_tests/mustAnalysis/irFiles/test3.ll \
+-disable-output
+```
+
+and the output
+
+```bash
+Running MemorySSADSEPass on function: dse_must_basic2
+  DSE: removing dead store:   store i32 %1, ptr %0, align 4
+```
