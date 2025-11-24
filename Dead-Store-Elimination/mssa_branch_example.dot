@@ -1,0 +1,23 @@
+digraph "MSSA_branch_example" {
+  node [shape=box,fontname="Courier"];
+  n0 [label="1 = MemoryDef(liveOnEntry)"];
+  n1 [label="0 = MemoryDef(liveOnEntry)"];
+  n1 -> n0;
+  n2 [label="2 = MemoryDef(1)"];
+  n0 [label="1 = MemoryDef(liveOnEntry)"];
+  n0 -> n2;
+  n3 [label="3 = MemoryDef(1)"];
+  n0 [label="1 = MemoryDef(liveOnEntry)"];
+  n0 -> n3;
+  n4 [label="5 = MemoryPhi({%5,2},{%6,3})"];
+  n2 [label="2 = MemoryDef(1)"];
+  n2 -> n4;
+  n3 [label="3 = MemoryDef(1)"];
+  n3 -> n4;
+  n5 [label="MemoryUse(5)"];
+  n4 [label="5 = MemoryPhi({%5,2},{%6,3})"];
+  n4 -> n5;
+  n6 [label="4 = MemoryDef(5)"];
+  n4 [label="5 = MemoryPhi({%5,2},{%6,3})"];
+  n4 -> n6;
+}
