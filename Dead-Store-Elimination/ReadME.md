@@ -165,7 +165,8 @@ clang++ -std=c++17 -fPIC -shared DeadStoreElimination/DeadStoreE.cpp -o dylibs/l
 $(llvm-config --cxxflags --ldflags --system-libs --libs core analysis passes)
 ```
 
-## Compiling the test cases which is in the `tests/mayAnalysis` and `tests/mustAnalysis` directories. The IR files are kept in `irFiles` folder in each of the 
+## Compiling the test cases 
+In the `tests/mayAnalysis` and `tests/mustAnalysis` directories. The IR files are kept in `irFiles` folder in each of the 
 may and must analysis folder in the `tests` directory
 
 ### May Analysis
