@@ -56,5 +56,5 @@ python generate_ir.py
 
 ## Run the compiler pipeline:
 ```Bash
-bash compile.sh
+chmod +x compile.sh
 ```
