@@ -55,6 +55,6 @@ python generate_ir.py
 ```
 
 ## Run the compiler pipeline:
-```bash
+```Bash
 bash compile.sh
 ```
